@@ -4,7 +4,7 @@ export function api<T>(url: string): Promise<T> {
       if (!response.ok) {
         throw new Error(response.statusText);
       }
-      return response.json<T>();
+      return response.json();
     });
 
 };

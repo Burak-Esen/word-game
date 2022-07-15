@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
 import { NextHead } from '@src/components/Head';
@@ -19,10 +19,12 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <a href="/memory-cards" className={styles.card}>
-            <h2>Memory Cards</h2>
-            <p>Basic memory cards to learn and remember words</p>
-          </a>
+          <Link href="/memory-cards" className={styles.card}>
+            <div>
+              <h2>Memory Cards</h2>
+              <p>Basic memory cards to learn and remember words</p>
+            </div>
+          </Link>
         </div>
       </main>
     </div>
