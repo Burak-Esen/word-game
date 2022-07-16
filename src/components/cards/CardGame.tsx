@@ -1,7 +1,6 @@
 import { Card } from '@src/components/cards/Card';
 import { useState, useEffect } from 'react';
-import { api } from '@src/utils/wordFetch';
-import { IWord } from '@models/word';
+import { api } from '@src/utils/api';
 
 interface Props {
   exp?: string

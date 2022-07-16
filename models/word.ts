@@ -1,29 +1,5 @@
 import mongoose from 'mongoose';
 
-export interface IWord {
-  en: Array<string>;
-  tr: Array<string>;
-  dt: Array<string>;
-  word_type: Array<'noun' | 'verb' | 'adverb' | 'adjective' | 'idiom'>;
-  verb?: Array<{
-    verb: string;
-    imperfectum?: Array<{ key: string; value: string}>;
-    perfectum?: Array<{ key: string; value: string}>;
-    is_regular_verb?: boolean;
-  }>;
-  art?: 'de' | 'het';
-  adj?: Array<{
-    adj: string;
-    comperative?: string;
-    superlative?: string;
-  }>;
-  adv?: Array<string>;
-  noun?: Array<string>;
-}
-
-export type IWordFromDb = IWord & mongoose.Types.ObjectId;
-export type IWordJson = IWord & { id: string };
-
 const wordSchema = new mongoose.Schema<IWord>(
   {
     en: [String],
@@ -48,4 +24,4 @@ const wordSchema = new mongoose.Schema<IWord>(
   }
 );
 
-export const WordModel = mongoose.models.word || mongoose.model('word', wordSchema);
+export const WordModel: mongoose.Model<IWord> = mongoose.models.word || mongoose.model<IWord>('word', wordSchema);

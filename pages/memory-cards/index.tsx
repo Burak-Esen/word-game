@@ -11,7 +11,7 @@ const index: NextPage = () => {
       <NextHead />
       <Header />
       <main >
-        <Flex height="90vh" alignItems="center" justifyContent="center">
+        <Flex height="80vh" alignItems="center" justifyContent="center">
           <CardGame />
         </Flex>
       </main>

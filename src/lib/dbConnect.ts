@@ -19,7 +19,6 @@ async function dbConnect () {
       useUnifiedTopology: true,
       bufferCommands: false,
     };
-    console.log('cashed connnection not found');
     globalWithDb._mongo = mongoose.connect(MONGODB_URI as string, opts).then(mongoose => {
       return mongoose;
     });

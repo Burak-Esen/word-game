@@ -20,10 +20,10 @@ const Home: NextPage = () => {
 
         <div className={styles.grid}>
           <Link href="/memory-cards" className={styles.card}>
-            <div>
+            <a>
               <h2>Memory Cards</h2>
               <p>Basic memory cards to learn and remember words</p>
-            </div>
+            </a>
           </Link>
         </div>
       </main>

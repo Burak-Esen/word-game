@@ -1,16 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import connect from '@lib/dbConnect';
-import { IWord, IWordFromDb, WordModel } from '@models/word';
-import { Types } from 'mongoose';
+import connect from '@src/lib/dbConnect';
+import { WordModel } from '@models/word';
+import { Types, Document } from 'mongoose';
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<IWordFromDb | { error: string }>
+  res: NextApiResponse
 ) {
   if (req.method === 'POST') {
     await connect();
     try {
-      const word = await WordModel.findById(req.query.word_id) as IWord & Types.ObjectId;
+      const word = await WordModel.findById(req.query.word_id);
       if (!word) {
         return res.status(200).json({ error: 'word not found' });
       }
