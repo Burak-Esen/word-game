@@ -1,9 +1,15 @@
-interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  exp: string
+import { Button as ChakraButton, ButtonProps } from '@chakra-ui/react';
+
+interface Props extends ButtonProps {
+  children: string;
+  onClick?: () => void;
 }
 
-export const Button: React.FC<Props> = (props: Props) => {
+export const Button: React.FC<Props> = ({
+  children,
+  ...props
+}: Props) => {
   return (
-    <div>Button</div>
+    <ChakraButton {...props}>{children}</ChakraButton>
   );
 };
