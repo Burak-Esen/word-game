@@ -1,7 +1,4 @@
-import {
-  Box,
-  BoxProps,
-} from '@chakra-ui/react';
+import { Box, BoxProps } from '@chakra-ui/react';
 import Link from 'next/link';
 
 interface Props extends BoxProps {}

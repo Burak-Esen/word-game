@@ -1,4 +1,4 @@
-import { hash, compare } from 'bcryptjs';
+import { compare, hash } from 'bcryptjs';
 
 export async function createHash(raw: string): Promise<string> {
   return await hash(raw, +(process.env.SALT as string));

@@ -1,6 +1,6 @@
 import { Card } from '@src/components/cards/Card';
-import { useState, useEffect } from 'react';
 import { api } from '@src/utils/api';
+import { useEffect, useState } from 'react';
 
 interface Props {
   exp?: string

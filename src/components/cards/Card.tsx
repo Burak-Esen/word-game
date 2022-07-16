@@ -1,10 +1,9 @@
 import {
   Box,
   Center,
-  useColorModeValue,
+  CenterProps,
   Heading,
-  Stack,
-  CenterProps
+  Stack
 } from '@chakra-ui/react';
 
 interface Props extends CenterProps {

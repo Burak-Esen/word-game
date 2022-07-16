@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import connect from '@src/lib/dbConnect';
 import { UserModel } from '@models/user';
+import connect from '@src/lib/dbConnect';
 import { compareHashAndPass } from '@src/utils/hash';
 import jwt from 'jsonwebtoken';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
   req: NextApiRequest,

@@ -1,7 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import connect from '@src/lib/dbConnect';
 import { WordModel } from '@models/word';
-import { Types, Document } from 'mongoose';
+import connect from '@src/lib/dbConnect';
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
   req: NextApiRequest,
