@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 
 import { CardGame } from '@src/components/cards/CardGame';
 import { NextHead } from '@src/components/Head';
-import { Header } from '@src/components/Header';
+import { Header } from '@src/views/Header';
 
 const index: NextPage = () => {
   return (

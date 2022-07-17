@@ -2,12 +2,16 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 
 import { NextHead } from '@src/components/Head';
+import { useAppSelector } from '@src/store/store';
+import { Header } from '@src/views/Header';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
+  const { user } = useAppSelector((state) => state);
   return (
     <div className={styles.container}>
       <NextHead />
+      <Header hasLoginForm={!user.isLoggedIn} />
 
       <main className={styles.main}>
         <h1 className={styles.title}>
