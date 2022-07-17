@@ -1,5 +1,5 @@
+import { api } from '@lib/getData/api';
 import { Card } from '@src/components/cards/Card';
-import { api } from '@src/utils/api';
 import { useEffect, useState } from 'react';
 
 interface Props {
